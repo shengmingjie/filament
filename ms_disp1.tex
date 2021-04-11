@@ -62,15 +62,15 @@ from current and future large scale structure surveys.
 \maketitle
 
 \section{Introduction}\label{sec.intro}
-Our Universe starts from primordial Gaussian perturbations at a very early stage, 
-and from those fluctuations, the gravitational instability drives the formation of 
+Our Universe starts from primordial Gaussian perturbations at a very early stage,
+and from those fluctuations, the gravitational instability drives the formation of
 the large scale structure (LSS) distribution of matter
 \citep{1970A&A.....5...84Z,1985ApJ...292..371D}.
-These structures grow 
-linearly until the perturbations are large enough so that the first order 
-perturbation theories are unable to analytically describe the LSS distributions 
-\citep{2016JCAP...01..043M}. 
-As a result, the final nonlinear LSS distribution contains higher order 
+These structures grow
+linearly until the perturbations are large enough so that the first order
+perturbation theories are unable to analytically describe the LSS distributions
+\citep{2016JCAP...01..043M}.
+As a result, the final nonlinear LSS distribution contains higher order
 statistics, and thus makes it more challenging to be interpreted into basic
 cosmological parameters. One such example is that, the baryonic acoustic oscillation (BAO)
 scale can be used as a ``standard ruler'' to constrain the cosmic expansion history
@@ -78,7 +78,7 @@ and thus probes the dark energy properties \citep{2005NewAR..49..360E}, but
 nonlinear evolution smears the BAO features and lowers the measurement
 accuracy \citep{2005ApJ...633..560E,2012MNRAS.419.2949N}.
 There are various attempts to recover earlier stages
-of LSS, in which statistics are closer to Gaussian 
+of LSS, in which statistics are closer to Gaussian
 \citep{1992MNRAS.254..315W,2013MNRAS.436..759H}.
 Because Gaussian fields can be adequately described by two-point statistics,
 ideally after some recovery algorithms, more information can be extracted,
@@ -88,10 +88,10 @@ more straightforwardly, by power spectra or two-point correlation functions
 
 Standard BAO reconstruction algorithms apply in Eulerian space.
 They usually smooth the nonlinear density field on
-linear scale ($\sim$10 Mpc$/h$) and reverse the large 
+linear scale ($\sim$10 Mpc$/h$) and reverse the large
 scale bulk flows by a negative Zel'dovich linear displacement
 \citep{2007ApJ...664..675E,2009PhRvD..80l3501N,2009PhRvD..79f3523P}.
-In the linear Lagrangian perturbation theory (LPT), the 
+In the linear Lagrangian perturbation theory (LPT), the
 negative divergence of the displacement field
 $-\nabla_q\cdot\bs\Psi(\bs q)$ with respect to Lagrangian coordinates $\bs q$
 gives the linear density field \citep{2010PhDT.........4J},
@@ -105,14 +105,14 @@ closer to $N$-body results. Because of the absence
 of Lagrangian space information in observations, few density
 reconstruction algorithms are developed according to the relation
 between displacement and linear density. However,
-there are techniques to estimate the displacement field from a final 
+there are techniques to estimate the displacement field from a final
 distribution of matter.
-For example, when a homogeneous initial matter distribution 
-is assumed, there is a unique solution of curl-less displacement field to relate 
-the initial and final distributions without shell crossing. This solution can be 
+For example, when a homogeneous initial matter distribution
+is assumed, there is a unique solution of curl-less displacement field to relate
+the initial and final distributions without shell crossing. This solution can be
 solved by a metric transformation equation
 \citep{1995ApJS..100..269P,1998ApJS..115...19P}.
-In the one-dimensional (1D) case, this solution 
+In the one-dimensional (1D) case, this solution
 simplifies to an ordering of mass elements by their final, Eulerian coordinates.
 Zhu {\it et al.} \cite{2016arXiv160907041Z} apply this algorithm to the result
 of a 1D simulation \citep{2016JCAP...01..043M} and obtain an estimated
@@ -120,7 +120,7 @@ displacement field $\tilde\Psi(q)$, and find
 that this new method well recovers the linear
 information and reconstructs 1D BAO peak in the correlation function.
 In 3D and more realistic cases, one needs to
-carefully consider effects of curl, shell crossing, 
+carefully consider effects of curl, shell crossing,
 complicated baryonic physics and biased tracers (galaxies).
 
 \begin{figure}
@@ -166,7 +166,7 @@ Discussion and conclusion are in section \ref{sec.discussion}.
 We show the LSS simulation and displacement field setups in section \ref{ss.sim}.
 In section \ref{ss.reco}, we recover the linear density field from the
 displacement field $\bs\Psi(\bs q)$ from simulations.
-Note that potential reconstruction algorithms are
+ that potential reconstruction algorithms are
 based on an estimated displacement field $\tilde{\bs \Psi}(\bs q)$
 instead of $\bs\Psi(\bs q)$. In the following sections we
 use $\delta_R$ to label the recovered linear density field
@@ -177,19 +177,19 @@ We use the open source cosmological simulation code {\tt CUBE} %\footnote{github
 \citep{cafcube}.
 Cosmological parameters are set as
 $\Omega_m=0.27$, $\Omega_\Lambda=0.73$, $h_0=0.68$, $n_s=0.96$ and $\sigma_8=0.83$.
-Initial conditions are generated at redshift $z=50$ 
+Initial conditions are generated at redshift $z=50$
 using Zel'dovich approximation, and using a CLASS transfer function
 \citep{2011JCAP...07..034B}.
-$N_p=512^3$ $N$-body particles are evolved via 
-their mutual gravitational interactions to $z=0$, in a periodic box with $L=400$ 
-Mpc$/h$ per side. The code is set to use standard a particle-mesh (PM) algorithm 
+$N_p=512^3$ $N$-body particles are evolved via
+their mutual gravitational interactions to $z=0$, in a periodic box with $L=400$
+Mpc$/h$ per side. The code is set to use standard a particle-mesh (PM) algorithm
 \cite{1988csup.book.....H} on a two-level mesh grids
 (for details see \cite{2013MNRAS.436..540H}) and cloud-in-cell
-(CIC) is used in particle interpolations in force 
-calculation and obtaining the density field $\rho({\bs x})$ in Eulerian coordinates 
-${\bs x}$ at late stages. We use density contrast $\delta\equiv\rho/\lb\rho\rb-1$ 
+(CIC) is used in particle interpolations in force
+calculation and obtaining the density field $\rho({\bs x})$ in Eulerian coordinates
+${\bs x}$ at late stages. We use density contrast $\delta\equiv\rho/\lb\rho\rb-1$
 to describe the density fluctuations. The primordial linear density field $
-\delta_L$ is given by the initial stage and scaled to $z=0$ by the linear growth 
+\delta_L$ is given by the initial stage and scaled to $z=0$ by the linear growth
 factor. In the top and middle panels of Fig.1 we show projections of the nonlinear density field
 $\delta_N$ given by the simulation and the linear density field $\delta_L$.
 $\delta_N$ is obtained by the particle distribution at redshift $z=0$, and
@@ -209,18 +209,18 @@ in appearance.
 \end{figure}
 
 
-The two-point statistics of these density fields are quantified by the cross power 
-spectrum $P_{ij}(k)\equiv(2\pi)^{-3}\langle|\delta_i(k)||\delta_j(k)|\rangle$, 
+The two-point statistics of these density fields are quantified by the cross power
+spectrum $P_{ij}(k)\equiv(2\pi)^{-3}\langle|\delta_i(k)||\delta_j(k)|\rangle$,
 where subscripts $i,j$ may refer to linear ($L$), nonlinear ($N$),
-recovered ($R$), or noise ($n$) density 
-fields. When $i=j$ it reduces to the auto power spectrum $P_{ii}(k)$ or $P(k)$. We 
-usually plot the dimensionless power spectrum $\Delta^2(k)\equiv k^3P(k)/2\pi^2$. 
+recovered ($R$), or noise ($n$) density
+fields. When $i=j$ it reduces to the auto power spectrum $P_{ii}(k)$ or $P(k)$. We
+usually plot the dimensionless power spectrum $\Delta^2(k)\equiv k^3P(k)/2\pi^2$.
 
 \subsection{Density recovery}\label{ss.reco}
-In the simulation, we use particle-ID (PID) to record the initial (Lagrangian) location ${\bs 
-q}$ of particles, and the information is tracked until the $z=0$ and we can get the 
-Lagrangian displacement vector ${\bs \Psi}\equiv{\bs x}-{\bs q}$ for every 
-particle. Then these vectors are interpolated onto the initial Lagrangian 
+In the simulation, we use particle-ID (PID) to record the initial (Lagrangian) location ${\bs
+q}$ of particles, and the information is tracked until the $z=0$ and we can get the
+Lagrangian displacement vector ${\bs \Psi}\equiv{\bs x}-{\bs q}$ for every
+particle. Then these vectors are interpolated onto the initial Lagrangian
 coordinates ${\bs q}$ of particles and we get the displacement field ${\bs \Psi}
 ({\bs q})$.
 To visualize the $\bs\Psi$ field, we draw a 3D uniform mesh over the volume,
@@ -230,7 +230,7 @@ The resulting mesh illustrates a ``pseudocurvilinear coordinate'' similar to \ci
 however the mesh can be overlapped due to shell crossing. The densest mesh grids
 trace the densest structures of $\delta_N$, whereas the undeformed grid positions
 are the Lagrangian coordinates in which we do the density recovery.
-The raw recovered density field is given by the differential motion of matter 
+The raw recovered density field is given by the differential motion of matter
 elements,
 \begin{equation}
     \delta_R=-\nabla\cdot{\bs \Psi}({\bs q}).
@@ -253,14 +253,14 @@ Correlating equation (\ref{eq.decompose}) with $\delta_R$ gives
 \begin{equation}
     P_{LR}=r'P_{RR}+P_{nR},
 \end{equation}
-where $P_{ij}\equiv\langle\delta_i\delta_j\rangle$ denotes the cross power 
-spectrum. Since $\delta_n$ is uncorrelated with $\delta_R$, $P_{nR}=0$. With the 
-definition of cross correlation coefficient $r(\delta_L,\delta_R)\equiv P_{LR}/\sqrt{P_{LL}P_{RR}}$ 
+where $P_{ij}\equiv\langle\delta_i\delta_j\rangle$ denotes the cross power
+spectrum. Since $\delta_n$ is uncorrelated with $\delta_R$, $P_{nR}=0$. With the
+definition of cross correlation coefficient $r(\delta_L,\delta_R)\equiv P_{LR}/\sqrt{P_{LL}P_{RR}}$
 and bias $b^2=P_{RR}/P_{LL}$, we solve $r'=P_{LR}/P_{RR}=rb^{-1}$.
 Note that these computations above and below can also be applied on $\delta_N$ for
 comparison, by replacing ``$_R$'' with ``$_N$'' in the equations,
 while we do not rewrite them explicitly
-in the paper for simplicity. From these, we plot the cross 
+in the paper for simplicity. From these, we plot the cross
 correlation coefficient $r_{LN}=r(\delta_L,\delta_N)$ and
 $r_{LR}=r(\delta_L,\delta_R)$ in Fig.\ref{fig.corr}.
 $r_{LN}$ shows no correlation starting from $k\simeq 0.4 h/$Mpc \citep{2004MNRAS.355..129S}.
@@ -295,7 +295,7 @@ Here $W^2$ describes the damping of the linear power spectrum.
 \section{Results}\label{sec.results}
 
 To visualize the above algorithms, a projection of $\delta_R$ is plotted in
-the bottom panel of Fig.\ref{fig.projection}, which looks closer to 
+the bottom panel of Fig.\ref{fig.projection}, which looks closer to
 $\delta_L$ compared to $\delta_N$. However the smallest scale structures are unable
 to be recovered.
 
@@ -326,7 +326,7 @@ scales of our interest.
 
 In Fig.\ref{fig.recopower}, we show the auto power spectra of
 $\delta_L$ and $\delta_N$ in black dashed and blue solid curves.
-Their difference shows the nonlinear evolution of LSS on 
+Their difference shows the nonlinear evolution of LSS on
 small scales. Their cross power (not shown for clarity of the figure)
 drops to a very low value on scales $k\gtrsim 0.1h/$Mpc,
 indicating a loss of linear information in the
@@ -343,13 +343,13 @@ equation (\ref{eq.power}). The correlated power spectrum
 is dominated on BAO scales of our interest.
 
 To quantify the improvement of cross-correlation in the power
-spectrum, we compute the 
-damping factors $W^2(k)$ respectively for the optimal filtered 
+spectrum, we compute the
+damping factors $W^2(k)$ respectively for the optimal filtered
 nonlinear and recovered density fields $\tilde\delta_N$
 and $\tilde\delta_R$.
 We fit Gaussian BAO damping models
 ${\mathcal D}(k)=\exp(-k^2\Sigma^2/2)$ to these $W^2(k)$'s
-and give $\Sigma=1.8$ Mpc$/h$ and $\Sigma=12$ 
+and give $\Sigma=1.8$ Mpc$/h$ and $\Sigma=12$
 Mpc$/h$ for $\delta_R$ and $\delta_N$.
 Since ${\mathcal D}(k)=W^2=r^4$, we plot
 ${\mathcal D}_N^{1/4}$ and ${\mathcal D}_R^{1/4}$
@@ -412,7 +412,7 @@ the exact solution by $N$-body simulations.
 
 The advantage of using displacement field in reconstruction is
 its insensitive response from highly nonlinearities.
-Nonlinear densities $\delta_N$ can be arbitrarily large -- 
+Nonlinear densities $\delta_N$ can be arbitrarily large --
 one expects virialized regions to be observable, where nonlinear
 density is given by the inverse determinant of the Jacobian
 $\delta_N=|\bs J|^{-1}\gtrsim 200$.
@@ -427,7 +427,7 @@ by \cite{1995ApJS..100..269P}, which do not have shell crossing,
 the additional shell crossing information in $\bs\Psi(\bs q)$
 is uncorrelated with $\delta_L$. This insensitive response from
 nonlinearities enables the stability of reconstruction algorithms,
-which are expected to give similar results of this paper. 
+which are expected to give similar results of this paper.
 In contrast, traditional
 treatments in reconstruction deals directly on density fields which sensitively
 relies on nonlinear processes --  density values can vary by orders
